@@ -40,7 +40,7 @@ inputs:
       summary: ""
       description: "Secret key for your AWS/IAM user. Define this as a secret environment variable in your workflow."
       is_required: true
-  - device_farm_project: ""
+  - device_farm_project: "$DEVICE_FARM_PROJECT"
     opts:
       title: "Device Farm Project ARN"
       summary: ""
@@ -114,7 +114,7 @@ inputs:
           - "uk_UA"
           - "vi_VN"
       is_required: false
-  - test_package_name: ""
+  - test_package_name: "$TEST_PACKAGE_NAME"
     opts:
       title: "Test Package Filename"
       summary: ""
@@ -123,7 +123,7 @@ inputs:
           This should be a filename (not a path) that matches the name of the test bundle previously uploaded with the [aws-device-farm-file-deploy](https://github.com/peartherapeutics/bitrise-aws-device-farm-file-deploy) step.
           The most recently uploaded package with this name will be used.
       is_required: true
-  - test_type: ""
+  - test_type: "$TEST_TYPE"
     opts:
       title: "Test Type"
       summary: ""
@@ -135,7 +135,7 @@ inputs:
       summary: ""
       description: "This step adds the opportunity to filter your tests. For example com.android.abc.test1. [See the ScheduleRunTest.filter documentation](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_ScheduleRunTest.html#devicefarm-Type-ScheduleRunTest-filter)."
       is_required: false
-  - platform: "ios+android"
+  - platform: "$PLATFORM"
     opts:
       title: "Platform"
       summary: ""
@@ -149,7 +149,7 @@ inputs:
     opts:
       title: "IPA file path"
       description: "Required for iOS runs."
-  - ios_pool: ""
+  - ios_pool: "$IOS_POOL"
     opts:
       title: "Device Farm iOS Device Pool ARN"
       description: "Required for iOS runs. ARNs can be obtained using the AWS CLI `devicefarm list-device-pools` command."
@@ -157,7 +157,7 @@ inputs:
     opts:
       title: "APK file path"
       description: "Required for Android runs."
-  - android_pool: ""
+  - android_pool: "$ANDROID_POOL"
     opts:
       title: "Device Farm Android Device Pool ARN"
       description: "Required for Android runs. ARNs can be obtained using the AWS CLI `devicefarm list-device-pools` command."
