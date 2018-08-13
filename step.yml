@@ -145,6 +145,21 @@ inputs:
         - "android"
         - "ios+android"
       is_required: true
+  - platform: "$IOS_PLATFORM"
+    opts:
+      title: "IOS Platform"
+      summary: ""
+      description: ""
+  - platform: "$ANDROID_PLATFORM"
+    opts:
+      title: "Android Platform"
+      summary: ""
+      description: ""
+  - platform: "$BOTH_PLATFORM"
+    opts:
+      title: "Both Platform"
+      summary: ""
+      description: ""
   - ipa_path: "$BITRISE_IPA_PATH"
     opts:
       title: "IPA file path"
