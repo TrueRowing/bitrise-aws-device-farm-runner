@@ -155,11 +155,6 @@ inputs:
       title: "Android Platform"
       summary: ""
       description: ""
-  - platform: "$BOTH_PLATFORM"
-    opts:
-      title: "Both Platform"
-      summary: ""
-      description: ""
   - ipa_path: "$BITRISE_IPA_PATH"
     opts:
       title: "IPA file path"
